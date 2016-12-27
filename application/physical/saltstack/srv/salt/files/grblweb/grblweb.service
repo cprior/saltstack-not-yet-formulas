@@ -1,0 +1,17 @@
+[Unit]
+Description=Running the Node.js application grblweb as a service
+After=local-fs.target
+
+[Service]
+ExecStart=/bin/bash -c '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use --lts && cd /opt/grblweb && node server.js'
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=grblweb
+User=root
+Group=root
+#Environment=NODE_ENV=production
+Environment=NVM_DIR=/usr/local/nvm
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+curl -u "cprior" https://api.github.com/user/repos -d '{"name":"saltstack-not-yet-formulas","description":"A Saltstack playground","homepage":"","auto_init":"true","license_template":"mit","has_wiki":"false","has_issues":"true","has_downloads":"false"}'
+
+python3 -c 'import crypt; print(crypt.crypt("mypassword", crypt.mksalt(crypt.METHOD_SHA512)))'
+
+salt-call --local state.apply
+
