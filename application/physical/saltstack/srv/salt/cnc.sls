@@ -40,6 +40,7 @@ enable the systemd service:
     - enable: true
     - provider: systemd
     - require:
+      - file: /opt/grblweb/config.js
       - file: /etc/systemd/system/grblweb.service
 
 place the systemd unit file in the correct folder:

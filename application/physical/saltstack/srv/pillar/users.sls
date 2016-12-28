@@ -5,7 +5,7 @@
     fullname: Christian Prior
     uid: 1976
     #python3 -c 'import crypt; print(crypt.crypt("helotism", crypt.mksalt(crypt.METHOD_SHA512)))'
-    password: $6$snip
+    password: $6$cNSrbPO47rEbGHgW$Gn6/O0MOb12iZV7n3kSRrDEq8bT.ZxNH9.LYR80.Pc1pE8X2tayJ0J/kcIKLH7xdsj6Me.ByzRGMp4G36ii4f1
     enforce_password: True
     # WARNING: If 'empty_password' is set to True, the 'password' statement
     # will be ignored by enabling password-less login for the user.
@@ -74,9 +74,12 @@
 #    # Using gitconfig without Git installed will result in an error
 #    # https://docs.saltstack.com/en/latest/ref/states/all/salt.states.git.html:
 #    # This state module now requires git 1.6.5 (released 10 October 2009) or newer.
-    gitconfig:
-      user.name: Christian Prior
-      user.email: cprior@gmail.com
+###
+###https://github.com/saltstack-formulas/users-formula/blob/master/users/init.sls#L446
+###
+###    gitconfig:
+###      user.name: Christian Prior
+###      user.email: cprior@gmail.com
 #      url."https://".insteadOf: "git://"
 #
 #

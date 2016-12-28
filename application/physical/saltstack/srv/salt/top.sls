@@ -16,5 +16,6 @@ base:
     - office
 
   'cnc-grbl-01':
+    - wlan_ap
     - nodejs
     - cnc

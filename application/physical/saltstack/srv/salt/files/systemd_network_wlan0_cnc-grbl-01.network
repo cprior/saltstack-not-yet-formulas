@@ -1,0 +1,10 @@
+[Match]
+Name=wlan0
+#lsusb
+#lsusb -D /dev/bus/usb/001/004
+#udevadm info -q path -n /dev/bus/usb/001/004
+#/devices/platform/dwc2_b/usb1/1-1/1-1.2
+
+
+[Network]
+Address=10.76.3.14/24
