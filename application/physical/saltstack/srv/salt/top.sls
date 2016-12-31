@@ -14,6 +14,10 @@ base:
     - python3
     - anaconda
     - office
+    - docker
+    - videoediting
+    - cam
+    - graphics
 
   'cnc-grbl-01':
     - wlan_ap
