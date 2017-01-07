@@ -18,6 +18,10 @@ base:
     - videoediting
     - cam
     - graphics
+    - dataanalysis
+    - admin-graphical
+    - microcontroller
+    - digitalnative
 
   'cnc-grbl-01':
     - wlan_ap

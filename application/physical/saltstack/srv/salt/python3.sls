@@ -5,7 +5,7 @@ python3:
     {% endif %}
 
 pip3:
-  pkg.installed:
+  pkg.latest:
     {% if grains['os'] == 'Ubuntu' %}
     - name: python3-pip 
     {% endif %}
@@ -30,3 +30,11 @@ jupyter notebook python3:
     - require:
       - pkg: pip3
       - pkg: pip3-needs-pip2
+
+jupyter notebook ipython3:
+  pip.installed:
+    - name: ipykernel
+    - bin_env: '/usr/bin/pip3'
+#    - upgrade: True
+    - require:
+      - pkg: pip3

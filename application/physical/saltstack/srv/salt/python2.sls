@@ -15,3 +15,11 @@ virtualenv2:
     {% if grains['os'] == 'Ubuntu' %}
     - name: virtualenv
     {% endif %}
+
+jupyter notebook ipython2:
+  pip.installed:
+    - name: ipykernel
+    - bin_env: '/usr/bin/pip'
+#    - upgrade: True
+    - require:
+      - pkg: pip2

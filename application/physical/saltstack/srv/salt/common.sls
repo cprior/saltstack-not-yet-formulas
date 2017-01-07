@@ -64,6 +64,14 @@ sudo:
     - name: sudo
     {% endif %}
 
+jq:
+  pkg.installed:
+    {% if grains['os'] == 'Gentoo' %}
+    - name: app-misc/jq
+    {% else %}
+    - name: jq
+    {% endif %}
+
 
 {% if grains['os'] == 'Ubuntu' %}
 install Ubuntu Make:

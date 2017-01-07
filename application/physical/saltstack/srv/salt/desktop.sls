@@ -7,6 +7,12 @@ shutter:
   pkg.installed:
     - name: shutter
 
+ttf-linux-libertine:
+  pkg.installed
+
+refresh font cache:
+  cmd.run:
+    - name: fc-cache
 
 x2go:
   pkgrepo.managed:
