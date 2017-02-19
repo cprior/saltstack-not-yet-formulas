@@ -1,0 +1,14 @@
+ruby:
+  pkg.installed
+ruby-dev:
+  pkg.installed
+make:
+  pkg.installed
+gcc:
+  pkg.installed
+jekyll:
+  gem.installed
+bundler:
+  gem.installed
+github-pages:
+  gem.installed

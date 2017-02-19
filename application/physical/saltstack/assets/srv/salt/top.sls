@@ -16,8 +16,10 @@ base:
     - office
     - docker
     - videoediting
+    - cad
     - cam
     - graphics
+    - gis
     - dataanalysis
     - admin-graphical
     - microcontroller

@@ -86,5 +86,11 @@ install Ubuntu Make:
     - name: ubuntu-make
 {% endif %}
 
-
+bsdtar:
+  pkg.installed:
+    {% if grains['os'] == 'Gentoo' %}
+    - name: app-arch/bsdtar
+    {% else %}
+    - name: bsdtar
+    {% endif %}
 

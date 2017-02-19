@@ -1,2 +1,2 @@
-application/physical/saltstack/srv/salt/files/Anaconda2-4.2.0-Linux-x86_64.sh
-application/physical/saltstack/srv/salt/files/arduino-1.8.0-linux64.tar.xz
+application/physical/saltstack/assets/srv/salt/files/Anaconda2-4.2.0-Linux-x86_64.sh
+application/physical/saltstack/assets/srv/salt/files/arduino-1.8.0-linux64.tar.xz
