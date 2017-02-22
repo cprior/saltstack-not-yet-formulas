@@ -84,6 +84,12 @@ install Ubuntu Make:
     - keyserver: keyserver.ubuntu.com
   pkg.installed:
     - name: ubuntu-make
+
+network-manager-openvpn:
+  pkg.installed
+network-manager-openvpn-gnome:
+  pkg.installed
+
 {% endif %}
 
 bsdtar:
