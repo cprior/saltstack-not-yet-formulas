@@ -40,6 +40,11 @@ this-is-needed-for-libgit2-to-be-found-by-pygit:
 /etc/salt/master.d:
   file.directory
 
+setting-fileserver_backend:
+  file.managed:
+    - name: /etc/salt/master.d/90_fileserver_backend.conf
+    - source: salt://files/salt-masterd-90_fileserver_backend.conf
+
 setting-some-file-roots:
   file.managed:
     - name: /etc/salt/master.d/90_file_roots.conf
@@ -55,9 +60,17 @@ setting-some-ext_pillar:
     - name: /etc/salt/master.d/90_ext_pillar.conf
     - source: salt://files/salt-masterd-90_ext_pillar.conf
 
+setting-external_auth:
+  file.managed:
+    - name: /etc/salt/master.d/90_external_auth.conf
+    - source: salt://files/salt-masterd-90_external_auth.conf
+
 salt-master:
   service:
     - running
     - watch:
-       - file: /etc/salt/master.d/90_file_roots.conf
-       - file: /etc/salt/master.d/90_gitfs_remotes.conf
+      - file: /etc/salt/master.d/90_fileserver_backend.conf
+      - file: /etc/salt/master.d/90_file_roots.conf
+      - file: /etc/salt/master.d/90_gitfs_remotes.conf
+      - file: /etc/salt/master.d/90_ext_pillar.conf
+      - file: /etc/salt/master.d/90_external_auth.conf
