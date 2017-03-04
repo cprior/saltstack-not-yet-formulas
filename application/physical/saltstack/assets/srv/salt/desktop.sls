@@ -31,3 +31,7 @@ x2go:
         - x2goclient
     - require:
       - pkgrepo: x2go
+
+touch tyyping tutor:
+  pkg.installed:
+    - name: klavaro
