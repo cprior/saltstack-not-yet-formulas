@@ -90,6 +90,9 @@ network-manager-openvpn:
 network-manager-openvpn-gnome:
   pkg.installed
 
+wmctrl:
+  pkg.installed
+
 {% endif %}
 
 bsdtar:
@@ -100,3 +103,10 @@ bsdtar:
     - name: bsdtar
     {% endif %}
 
+torrent cli client:
+  pkg.installed:
+    {% if grains['os'] == 'Gentoo' %}
+    - name: net-p2p/ctorrent
+    {% else %}
+    - name: ctorrent
+    {% endif %}
