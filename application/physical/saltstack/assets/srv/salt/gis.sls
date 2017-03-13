@@ -11,3 +11,16 @@ qgis:
         - qgis
     - require:
       - pkgrepo: qgis
+
+libxml2:
+  pkg.installed
+
+libxml2-dev:
+  pkg.installed
+
+
+#libxml-ruby builder osmlib-base osmlib-export osmlib-sqlite
+{% for item in ['libxml-ruby', 'builder', 'osmlib-base', 'osmlib-export', 'osmlib-sqlite'] %}
+{{ item }}:
+  gem.installed
+{% endfor %}
