@@ -93,6 +93,12 @@ network-manager-openvpn-gnome:
 wmctrl:
   pkg.installed
 
+systemd-ui:
+  pkg.installed
+
+systemd-container:
+  pkg.installed
+
 {% endif %}
 
 bsdtar:
