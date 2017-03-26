@@ -11,3 +11,6 @@ inkscape:
         - inkscape
     - require:
       - pkgrepo: inkscape
+
+scribus:
+  pkg.installed
