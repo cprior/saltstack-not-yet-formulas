@@ -1,0 +1,2 @@
+rinse:
+  pkg.installed
