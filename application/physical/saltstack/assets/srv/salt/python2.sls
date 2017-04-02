@@ -23,3 +23,11 @@ jupyter notebook ipython2:
 #    - upgrade: True
     - require:
       - pkg: pip2
+
+make sure pylint is installed:
+  pip.installed:
+    - name: pylint
+    - bin_env: '/usr/bin/pip'
+    - upgrade: True
+    - require:
+      - pkg: pip2

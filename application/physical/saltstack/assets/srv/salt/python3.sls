@@ -38,3 +38,11 @@ jupyter notebook ipython3:
 #    - upgrade: True
     - require:
       - pkg: pip3
+
+make sure pylint on Python3 is installed:
+  pip.installed:
+    - name: pylint
+    - bin_env: '/usr/bin/pip3'
+    - upgrade: True
+    - require:
+      - pkg: pip3
