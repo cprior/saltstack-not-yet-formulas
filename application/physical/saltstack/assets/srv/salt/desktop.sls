@@ -35,3 +35,9 @@ x2go:
 touch tyyping tutor:
   pkg.installed:
     - name: klavaro
+
+xclip:
+  pkg.installed
+
+qtconsole:
+  pip.installed
