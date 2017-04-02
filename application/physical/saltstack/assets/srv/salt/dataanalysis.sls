@@ -1,4 +1,6 @@
-
+include:
+  - python2
+  - python3
 
 pip3fordataanalysis:
   pkg.latest:
@@ -34,3 +36,16 @@ geocoder python3:
     - require:
       - pkg: pip3
 
+csvkit3:
+  pip.installed:
+    - name: csvkit
+    - upgrade: True
+    - require:
+      - pkg: pip3
+
+csvkit2:
+  pip.installed:
+    - name: csvkit
+    - upgrade: True
+    - require:
+      - pkg: pip2
