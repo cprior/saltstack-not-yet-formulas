@@ -12,3 +12,7 @@ bundler:
   gem.installed
 github-pages:
   gem.installed
+
+seems-necesary:
+  cmd.run:
+    - name: sudo bundle --full-index
