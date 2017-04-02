@@ -5,3 +5,6 @@ base:
 
   'T500-*':
     - java
+
+  'T530-*':
+    - editor
