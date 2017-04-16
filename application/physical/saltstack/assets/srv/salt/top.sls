@@ -3,8 +3,10 @@ base:
   '*':
     - common
     - users
+    - users.profile
 
-  'T500-*':
+  'T530-*':
+    - users.profile
     - desktop
     - java
     - vscode
@@ -24,6 +26,10 @@ base:
     - admin-graphical
     - microcontroller
     - digitalnative
+    - container
+
+  'T500-*':
+    - desktop
 
   'cnc-grbl-01':
     - wlan_ap

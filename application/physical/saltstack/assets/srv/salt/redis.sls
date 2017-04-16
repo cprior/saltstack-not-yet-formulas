@@ -101,3 +101,56 @@ redis.service:
       - file: /etc/systemd/system/redis.service
 
 
+
+RedisDesktopManager_repo: 
+  git.latest: 
+    - name: https://github.com/uglide/RedisDesktopManager.git
+    - target: /tmp/RedisDesktopManager
+    - rev: 0.9.0-alpha3
+    - submodules: True
+
+
+opt-qt571-xenial:
+  pkgrepo.managed:
+    - humanname: Qt 5.7.1 for /opt Xenial
+    - name: deb http://ppa.launchpad.net/beineri/opt-qt571-xenial/ubuntu xenial main
+    - dist: xenial
+    - file: /etc/apt/sources.list.d/opt-qt571-xenial.list
+    - keyid: E9977759
+    - keyserver: keyserver.ubuntu.com
+  pkg.installed:
+    - pkgs:
+        - qt57-meta-full
+    - require:
+      - pkgrepo: opt-qt571-xenial
+
+
+opt-qt562-xenial:
+  pkgrepo.managed:
+    - humanname: Qt 5.6.2 for /opt Xenial
+    - name: deb http://ppa.launchpad.net/beineri/opt-qt562-xenial/ubuntu xenial main
+    - dist: xenial
+    - file: /etc/apt/sources.list.d/opt-qt562-xenial.list
+    - keyid: E9977759
+    - keyserver: keyserver.ubuntu.com
+  pkg.installed:
+    - pkgs:
+        - qt56-meta-full
+    - require:
+      - pkgrepo: opt-qt562-xenial
+
+
+#install-RedisDesktopManager:
+#  cmd.run:
+#    - name: |
+#        cd /tmp/RedisDesktopManager/src
+#        ./configure
+#        source /opt/qt56/bin/qt56-env.sh && qmake && make && sudo make install
+#        cd /usr/share/redis-desktop-manager/bin
+#        sudo mv qt.conf qt.backup
+#        cd /tmp
+#    - output_loglevel: quiet
+#    - cwd: /tmp/RedisDesktopManager
+#    - shell: /bin/bash
+#    - timeout: 300
+#    - unless: test -x /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so
